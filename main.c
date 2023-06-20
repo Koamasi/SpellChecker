@@ -140,14 +140,19 @@ int main(void)
 
 			if (min == 0)
 			{
-				printf("Correct spelling\n");
-				system("echo Press any key to continue. && read -n 1&& clear");
+				printf("Correct spelling :)\n");
+				system("echo Press any key to continue. && read -n 1 && clear");
+			}
+			else if (min == fmax(strlen(input), strlen(WordList[min_index])))
+			{
+				printf("We can't find the word in the database, maybe you can google it ):\n");
+				system("echo Press any key to continue. && read -n 1 && clear");
 			}
 			else
 			{
-				printf("Misspell\n");
-				printf("Do you mean %s?\n", WordList[min_index]);
-				system("echo Press any key to continue. && read -n 1&& clear");
+				printf("Misspell ):\n");
+				printf("Do you mean \"%s\"?\n", WordList[min_index]);
+				system("echo Press any key to continue. && read -n 1 && clear");
 			}
 		}
 	}
